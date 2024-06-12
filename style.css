@@ -18,7 +18,6 @@ a {
 header {
   width: 100%;
   background: #232323;
-  border-bottom: 1px solid #f1f2f5;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,17 +25,19 @@ header {
 }
 header .header_inner {
   width: 100%;
-  padding: 1% 6%;
+  padding: 10px 6%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   transition: 0.3s;
 }
-header .header_inner .logo a {
-  display: block;
-  font-size: 26px;
-  color: #efeff1;
+header .header_inner .logo img {
+  width: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 header .header_inner .gnb {
   width: 100%;
@@ -83,12 +84,14 @@ main #home .inner .home_title h2 {
   font-size: 120px;
   font-weight: 900;
   color: #f1f2f5;
+  animation: ttb1 1s ease-in-out;
 }
 main #home .inner .home_title span {
   display: block;
   font-size: 40px;
   margin-top: -25px;
   color: #fff;
+  animation: ttb2 1.5s ease-in-out;
 }
 main #home .inner .home_title p {
   display: block;
@@ -96,6 +99,7 @@ main #home .inner .home_title p {
   font-size: 19px;
   line-height: 1.8rem;
   color: #f1f2f5;
+  animation: ttb3 2s ease-in-out;
 }
 main #home .inner .home_title p b {
   font-size: 20px;
@@ -131,7 +135,6 @@ main #home .inner .home_bg_icon img {
 }
 main #home .inner .home_bg_icon img.book {
   width: 150px;
-  transform: rotate(-20deg);
   position: absolute;
   top: 10%;
   left: 20%;
@@ -158,41 +161,13 @@ main #home .inner .home_bg_icon img.laptop {
     transform: translateY(-10px);
   }
 }
-@keyframes scroll_down {
-  0% {
-    bottom: 20px;
-    opacity: 1;
-  }
-  50% {
-    bottom: 10px;
-    opacity: 0.2;
-  }
-  100% {
-    bottom: 20px;
-    opacity: 1;
-  }
-}
-@keyframes wheel {
-  0% {
-    transform: translate(-50%, 5px);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-50%, 15px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 30px);
-    opacity: 0;
-  }
-}
 main #about {
   width: 100%;
   height: 100%;
   background: #232323;
 }
 main #about .inner {
-  padding: 15% 6%;
+  padding: 8% 6%;
 }
 main #about .inner h1 {
   display: block;
@@ -211,6 +186,7 @@ main #about .inner .about_info .about_txt {
   width: 70%;
   position: relative;
   float: right;
+  animation: opacity 2s ease-in-out;
 }
 main #about .inner .about_info .about_txt p {
   line-height: 2rem;
@@ -231,6 +207,7 @@ main #skill .inner .skill_contents {
   align-items: center;
   flex-wrap: wrap;
   gap: 1%;
+  animation: titDownslide 1s ease-in-out;
 }
 main #skill .inner .skill_contents .skill_content {
   width: 24%;
@@ -313,6 +290,7 @@ main #project .inner .slideContainer .slider_projects {
   justify-content: flex-start;
   align-items: center;
   transition: transform 0.5s;
+  animation: titDownslide 1s ease-in-out;
 }
 main #project .inner .slideContainer .slider_projects .slider_project {
   width: 100%;
@@ -371,6 +349,7 @@ main #project .inner .slideContainer .slider_projects .slider_project .project_d
   background: orange;
   border-radius: 30px;
   transition: 0.3s;
+  cursor: pointer;
 }
 main #project .inner .slideContainer .slider_projects .slider_project .project_desc .view_more_btn button a {
   width: 100%;
@@ -390,7 +369,7 @@ main #project .inner .project_slide_controller {
   padding: 10px;
   position: absolute;
   top: 45%;
-  left: 0;
+  right: 0;
 }
 main #project .inner .project_slide_controller button {
   border: none;
@@ -398,6 +377,7 @@ main #project .inner .project_slide_controller button {
   text-indent: -999999px;
   width: 70px;
   height: 100px;
+  cursor: pointer;
 }
 main #project .inner .project_slide_controller button.prev_btn {
   left: 0;
@@ -424,6 +404,7 @@ main #project .inner .project_pager span {
   background: #ccc;
   margin: 0 2px;
   transition: 0.3s;
+  cursor: pointer;
 }
 main #project .inner .project_pager span.on {
   width: 10px;
@@ -475,8 +456,9 @@ main #example .inner .example_top .example_category li.on a {
 main #example .inner .example_contents {
   display: flex;
   justify-content: flex-start;
-  gap: 2%;
   flex-wrap: wrap;
+  gap: 2%;
+  animation: titDownslide 1s ease-in-out;
 }
 main #example .inner .example_contents .example_content {
   width: 32%;
@@ -603,6 +585,7 @@ main #contact .inner .contact_img {
   width: 300px;
   height: 300px;
   background: url(./img/myIcon.png) center center/contain no-repeat;
+  animation: ttb1 1s ease-in-out;
 }
 main #contact .inner .contact_img:hover {
   background: url(./img/myOverIcon.png) center center/contain no-repeat;
@@ -616,10 +599,12 @@ main #contact .inner .contact_text_box span {
   display: block;
   font-size: 22px;
   margin-bottom: 10px;
+  animation: ttb2 2s ease-in-out;
 }
 main #contact .inner .contact_text_box p {
   font-size: 20px;
   color: #f00;
+  animation: ttb3 2.5s ease-in-out;
 }
 main #contact .inner .sns {
   display: flex;
@@ -627,6 +612,7 @@ main #contact .inner .sns {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  animation: ttb4 3.5s ease-in-out;
 }
 main #contact .inner .sns li {
   padding: 5px;
@@ -743,11 +729,14 @@ footer span {
 }
 
 .featherlight-content {
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   max-height: 100% !important;
   position: relative;
   border-radius: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: none !important;
 }
 .featherlight-content .featherlight-inner {
   width: 100%;
@@ -759,11 +748,82 @@ footer span {
   right: 50px !important;
   font-size: 40px;
   transition: 0.3s;
+  background: none !important;
 }
 .featherlight-content .featherlight-close-icon:hover {
   color: rgb(202, 0, 0);
 }
 
+@keyframes ttb1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ttb2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ttb3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ttb4 {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes titDownslide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   header .header_inner .gnb li {
     width: 15%;
@@ -1041,6 +1101,7 @@ footer span {
   main #skill .inner .skill_contents .skill_content {
     width: 100%;
     height: 180px;
+    margin-bottom: 2%;
   }
   main #skill .inner .skill_contents .skill_content .skill_content_tit {
     gap: 15px;
@@ -1079,10 +1140,17 @@ footer span {
     font-size: 16px;
   }
   main #project .inner .project_slide_controller {
-    top: 42%;
+    width: 35%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
   }
   main #project .inner .project_slide_controller button {
-    width: 50px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #f1f2f5;
   }
   main #example .inner .example_top .example_category {
     gap: 5px;

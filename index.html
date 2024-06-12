@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <!-- custom css & js -->
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
@@ -19,6 +20,8 @@
       type="text/javascript"
       charset="utf-8"
     ></script>
+    <!-- wow.js -->
+    <script src="./wow.js"></script>
     <!-- fontawesome -->
     <script
       defer
@@ -32,7 +35,7 @@
       <header>
         <div class="header_inner">
           <div class="logo">
-            <a href="#home">KMJ</a>
+            <a href="#home"><img src="./img/logo.png" alt="logo" /></a>
           </div>
           <ul class="gnb">
             <li><a href="#about">About</a></li>
@@ -52,10 +55,10 @@
         <section id="home">
           <div class="inner">
             <div class="home_title">
-              <h2>Web-Publisher</h2>
-              <span>웹 퍼블리셔 <b>권민주</b>입니다.</span>
-              <p>
-                <b>수용적</b>이고 <b>긍적적</b>인 마인드로 <br />
+              <h2 class="wow">Web-Publisher</h2>
+              <span class="wow">웹 퍼블리셔 <b>권민주</b>입니다.</span>
+              <p class="wow">
+                <b>수용적</b>이고 <b>긍정적</b>인 마인드로 <br />
                 포기하지 않고 <b>책임감</b>있게 일하는 퍼블리셔입니다.
               </p>
             </div>
@@ -75,12 +78,12 @@
         </section>
         <section id="about">
           <div class="inner">
-            <h1>About me</h1>
+            <h1 class="wow">About me</h1>
             <div class="about_info">
               <div class="about_arrow">
-                <img src="./img/about_arrow.png" alt="about_arrow" />
+                <img class="wow" src="./img/about_arrow.png" alt="about_arrow" />
               </div>
-              <div class="about_txt">
+              <div class="about_txt wow">
                 <p>
                   사용자의 입장에서 한번 더 생각하는 웹 퍼블리셔가 되고
                   싶습니다.
@@ -97,8 +100,8 @@
         </section>
         <section id="skill">
           <div class="inner">
-            <h1>Skill</h1>
-            <div class="skill_contents">
+            <h1 class="wow">Skill</h1>
+            <div class="skill_contents wow">
               <div class="skill_content">
                 <div class="skill_content_tit">
                   <div class="skill_content_imgBox">
@@ -208,9 +211,9 @@
         </section>
         <section id="project">
           <div class="inner">
-            <h1>Project</h1>
+            <h1 class="wow">Project</h1>
             <div class="slideContainer">
-              <ul class="slider_projects">
+              <ul class="slider_projects wow">
                 <li class="slider_project" data-index="0">
                   <div class="project_photo">
                     <img src="./img/aesop.png" alt="aesop" />
@@ -332,7 +335,7 @@
         <section id="example">
           <div class="inner">
             <div class="example_top">
-              <h1>Example</h1>
+              <h1 class="wow">Example</h1>
               <ul class="example_category">
                 <li class="on"><a href="all">All</a></li>
                 <li><a href="uiux">UI/UX</a></li>
@@ -341,6 +344,40 @@
               </ul>
             </div>
             <div class="example_contents">
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/abib.png" alt="Abib_img" />
+                </div>
+                <div class="content_desc">
+                  <h2>Abib 클론코딩</h2>
+                  <a href="https://abib-clonecoding.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    아비브 메인 페이지를 클론코딩하였습니다. 
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>SCSS</li>
+                    <li>JS</li>
+                    <li>Figma</li>
+                    <li>반응형</li>
+                  </ul>
+                  <div class="content_overlap">
+                    <h2>Abib 클론코딩</h2>
+                    <button class="content_website">
+                      <a
+                        href="https://abib-clonecoding.web.app"
+                        target="_blank"
+                        >사이트 보기</a
+                      >
+                    </button>
+                    <button class="content_github">
+                      <a href="https://github.com/mayminzz/Abib-clonecoding" target="_blank">Github 보기</a>
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div class="example_content all js">
                 <div class="content_image">
                   <img src="./img/kwangwoon.png" alt="kwangwoon" />
@@ -371,7 +408,7 @@
                       >
                     </button>
                     <button class="content_github">
-                      <a href="" target="_blank">Github 보기</a>
+                      <a href="https://github.com/mayminzz/kwangwoon-clonecoding" target="_blank">Github 보기</a>
                     </button>
                   </div>
                 </div>
@@ -428,8 +465,7 @@
                   <p class="content_info">
                     카테고리에 따라 상품을 분류하여 사용자에게 보기 쉽게
                     제공합니다. 카트 버튼을 클릭하면 선택한 상품이 장바구니에
-                    추가되고 상품의 수량에 따라 가격이 동적으로 변화합니다. 필요
-                    없는 상품을 손쉽게 삭제할 수 있습니다.
+                    추가되고 상품의 수량에 따라 가격이 동적으로 변화합니다.
                   </p>
                   <ul class="content_skill">
                     <li>HTML5</li>
@@ -471,6 +507,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>Lotto 번호 추첨기</h2>
@@ -504,6 +541,7 @@
                   <ul class="content_skill">
                     <li>HTML5</li>
                     <li>CSS3</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>NAVER 클론코딩</h2>
@@ -540,6 +578,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>맥도날드 클론코딩</h2>
@@ -574,6 +613,7 @@
                     <li>HTML5</li>
                     <li>SCSS</li>
                     <li>JS</li>
+                    <li>반응형</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>강아지대통령 클론코딩</h2>
@@ -608,6 +648,7 @@
                     <li>HTML5</li>
                     <li>SCSS</li>
                     <li>JS</li>
+                    <li>Mobile</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>에이블리 클론코딩</h2>
@@ -643,6 +684,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>Mobile</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>D-day 기념일 계산</h2>
@@ -677,6 +719,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>Toggle 예제</h2>
@@ -711,6 +754,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>KakaoBank 네비게이션 클론코딩</h2>
@@ -747,6 +791,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>Apple 네비게이션</h2>
@@ -785,6 +830,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>라이브러리 Isotpoe 예제</h2>
@@ -819,6 +865,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>Mobile</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>MUSINSA 로그인 페이지 클론코딩</h2>
@@ -853,6 +900,7 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JS</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>슬라이드 예제</h2>
@@ -886,6 +934,7 @@
                   <ul class="content_skill">
                     <li>React</li>
                     <li>Styled-Component</li>
+                    <li>PC</li>
                   </ul>
                   <div class="content_overlap">
                     <h2>mbti 고양이</h2>
@@ -920,9 +969,10 @@
                   <ul class="content_skill">
                     <li>React</li>
                     <li>Styled-Component</li>
+                    <li>Mobile</li>
                   </ul>
                   <div class="content_overlap">
-                    <h2>mbti 고양이</h2>
+                    <h2>To do list</h2>
                     <button class="content_website">
                       <a href="https://todolist-9345c.web.app" target="_blank"
                         >사이트 보기</a
@@ -943,12 +993,12 @@
         </section>
         <section id="contact">
           <div class="inner">
-            <div class="contact_img"></div>
+            <div class="contact_img wow"></div>
             <div class="contact_text_box">
-              <span>기억에 남을 수 있는, 기대할 수 있는 인재</span>
-              <p>어떠한 말씀도 소중하게 담고 배우겠습니다.</p>
+              <span class="wow">기억에 남을 수 있는, 기대할 수 있는 인재</span>
+              <p class="wow">어떠한 말씀도 소중하게 담고 배우겠습니다.</p>
             </div>
-            <ul class="sns">
+            <ul class="sns wow">
               <li class="github">
                 <a href="https://github.com/mayminzz" target="_blank">
                   GitHub
