@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-    <!-- custom css & js -->
-    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <!-- featherlight -->
     <link
@@ -13,29 +11,27 @@
       type="text/css"
       rel="stylesheet"
     />
-    <script defer src="//code.jquery.com/jquery-latest.js"></script>
-    <script
-      defer
-      src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
-    <!-- wow.js -->
-    <script src="./wow.js"></script>
-    <!-- fontawesome -->
-    <script
-      defer
-      src="https://kit.fontawesome.com/bd0a8925a1.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>MINJU</title>
   </head>
   <body>
     <div id="container">
       <header>
         <div class="header_inner">
+          <div class="bright_version">
+            <div class="button_wrap">
+              <div class="toggle_button"></div>
+            </div>
+            <span>Light Mode</span>
+          </div>
           <div class="logo">
-            <a href="#home"><img src="./img/logo.png" alt="logo" /></a>
+            <a href="#home">
+              <!-- <img src="./img/logo.png" alt="logo" /> -->
+            </a>
           </div>
           <ul class="gnb">
             <li><a href="#about">About</a></li>
@@ -55,45 +51,60 @@
         <section id="home">
           <div class="inner">
             <div class="home_title">
-              <h2 class="wow">Web-Publisher</h2>
-              <span class="wow">웹 퍼블리셔 <b>권민주</b>입니다.</span>
-              <p class="wow">
-                <b>수용적</b>이고 <b>긍정적</b>인 마인드로 <br />
-                포기하지 않고 <b>책임감</b>있게 일하는 퍼블리셔입니다.
-              </p>
+              <h1 class="publisher left_txt">PUBLISHER</h1>
+              <h1 class="name right_txt">
+                <span>KW</span><span>N MINJU</span>
+              </h1>
+              <h1 class="portfolio left_txt">
+                <span>P</span><span>RTF</span><span>LI</span>
+              </h1>
             </div>
-            <div class="home_image">
-              <img src="./img/home_myImg.png" alt="home_myImg" />
-            </div>
-            <div class="home_bg_icon">
-              <img src="./img/book.png" alt="bookIcon" class="book" />
-              <img src="./img/laptop.png" alt="laptopIcon" class="laptop" />
-              <img
-                src="./img/algorithm.png"
-                alt="algorithmOcon"
-                class="algorithm"
-              />
+            <div class="scroll_down_icon">
+              <span class="scroll_down_icon_mouse">
+                <span class="scroll_down_icon_mouse_move"></span>
+              </span>
+              <div class="scroll_down_text">
+                <p>SCOLL DOWN!</p>
+              </div>
             </div>
           </div>
         </section>
         <section id="about">
           <div class="inner">
-            <h1 class="wow">About me</h1>
-            <div class="about_info">
-              <div class="about_arrow">
-                <img class="wow" src="./img/about_arrow.png" alt="about_arrow" />
+            <div class="about_box">
+              <div class="photo wow">
+                <img src="./img/me1.jpg" alt="myImg" />
               </div>
-              <div class="about_txt wow">
+              <div class="desc wow">
+                <h1>
+                  안녕하세요!<br />발전가능성이 무한한 <br />웹 퍼블리셔
+                  <b>권민주</b>입니다🖐️
+                </h1>
+                <p>웹 개발에 관심이 많아 열심히 공부중입니다.</p>
                 <p>
-                  사용자의 입장에서 한번 더 생각하는 웹 퍼블리셔가 되고
-                  싶습니다.
+                  머릿속 아이디어를 눈앞에 <b>구현하는 것에 매력</b>을 느낍니다.
                 </p>
                 <p>
-                  지속적인 학습을 위해 스터디와 온라인 강의에 적극 참여하고,
-                  <b>낯선 기술에도 포기 하지 않고 해결</b>하고자 노력하고
-                  있습니다. 열린 마음으로 피드백을 소중히 여기고 타인의 의견을
-                  존중하며, <b>경청</b>할 준비가 되어 있습니다.
+                  항상 귀를 기울이며 <b>스폰지처럼 흡수</b>하는 퍼블리셔가
+                  되겠습니다.
                 </p>
+                <div class="experience">
+                  <h2>교육이수</h2>
+                  <ul class="education">
+                    <li>
+                      <span>2024.01.23 ~ 2024.02.29</span>
+                      <p>바닐라 자바스크립트(Vanilla Javascript)</p>
+                    </li>
+                    <li>
+                      <span>2023.08.21 ~ 2024.01.08</span>
+                      <p>UIUX 웹앱 디자인(피그마)&프론트엔드(react.js)</p>
+                    </li>
+                    <li>
+                      <span>2023.08.01 ~ 2023.08.31</span>
+                      <p>UIUX 모바일 앱 디자인 (피그마)</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -212,9 +223,9 @@
         <section id="project">
           <div class="inner">
             <h1 class="wow">Project</h1>
-            <div class="slideContainer">
-              <ul class="slider_projects wow">
-                <li class="slider_project" data-index="0">
+            <div class="swiper wow">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <div class="project_photo">
                     <img src="./img/aesop.png" alt="aesop" />
                   </div>
@@ -224,9 +235,8 @@
                       <p>자기소개 사이트 제작</p>
                       <div class="badge">
                         <span>#팀 프로젝트</span>
-                        <span>#리뉴얼</span>
                         <span>#참여도 50%</span>
-                        <span>#반응형</span>
+                        <span>#리뉴얼</span>
                       </div>
                     </div>
                     <div class="view_more_btn">
@@ -239,8 +249,8 @@
                       </button>
                     </div>
                   </div>
-                </li>
-                <li class="slider_project" data-index="1">
+                </div>
+                <div class="swiper-slide">
                   <div class="project_photo">
                     <img src="./img/myPage.png" alt="mypage" />
                   </div>
@@ -250,10 +260,7 @@
                       <p>자기소개 사이트 제작</p>
                       <div class="badge">
                         <span>#개인 프로젝트</span>
-                        <span>#기획</span>
-                        <span>#디자인</span>
                         <span>#참여도 100%</span>
-                        <span>#반응형</span>
                       </div>
                     </div>
                     <div class="view_more_btn">
@@ -266,8 +273,8 @@
                       </button>
                     </div>
                   </div>
-                </li>
-                <li class="slider_project" data-index="2">
+                </div>
+                <div class="swiper-slide">
                   <div class="project_photo">
                     <img src="./img/shinhan_img.png" alt="shinhan" />
                   </div>
@@ -277,9 +284,7 @@
                       <p>클론코딩</p>
                       <div class="badge">
                         <span>#PM</span>
-                        <span>#참여도 50%</span>
-                        <span>#팀 프로젝트</span>
-                        <span>#반응형</span>
+                        <span>#참여도 100%</span>
                       </div>
                     </div>
                     <div class="view_more_btn">
@@ -292,8 +297,8 @@
                       </button>
                     </div>
                   </div>
-                </li>
-                <li class="slider_project" data-index="3">
+                </div>
+                <div class="swiper-slide">
                   <div class="project_photo">
                     <img src="./img/etude.png" alt="etude" />
                   </div>
@@ -304,7 +309,6 @@
                       <div class="badge">
                         <span>#개인 프로젝트</span>
                         <span>#참여도 100%</span>
-                        <span>#반응형</span>
                       </div>
                     </div>
                     <div class="view_more_btn">
@@ -317,215 +321,26 @@
                       </button>
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="project_slide_controller">
-              <button class="prev_btn">이전버튼</button>
-              <button class="next_btn">다음버튼</button>
-            </div>
-            <div class="project_pager">
-              <span class="on" data-index="0"></span>
-              <span data-index="1"></span>
-              <span data-index="2"></span>
-              <span data-index="3"></span>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </section>
         <section id="example">
           <div class="inner">
             <div class="example_top">
-              <h1 class="wow">Example</h1>
+              <h1>Example</h1>
               <ul class="example_category">
                 <li class="on"><a href="all">All</a></li>
-                <li><a href="uiux">UI/UX</a></li>
+                <li><a href="uiux">UIUX</a></li>
                 <li><a href="js">JS</a></li>
                 <li><a href="react">React</a></li>
               </ul>
             </div>
-            <div class="example_contents">
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/abib.png" alt="Abib_img" />
-                </div>
-                <div class="content_desc">
-                  <h2>Abib 클론코딩</h2>
-                  <a href="https://abib-clonecoding.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    아비브 메인 페이지를 클론코딩하였습니다. 
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>SCSS</li>
-                    <li>JS</li>
-                    <li>Figma</li>
-                    <li>반응형</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>Abib 클론코딩</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://abib-clonecoding.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a href="https://github.com/mayminzz/Abib-clonecoding" target="_blank">Github 보기</a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/kwangwoon.png" alt="kwangwoon" />
-                </div>
-                <div class="content_desc">
-                  <h2>광운대학교 중앙도서관 클론코딩</h2>
-                  <a href="https://compose-coffee-d7e8a.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    광운대학교 중앙도서관 페이지를 클론코딩하였습니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>SCSS</li>
-                    <li>JS</li>
-                    <li>Figma</li>
-                    <li>PC</li>
-                    <li>슬라이드</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>광운대학교 중앙도서관</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://kwangwoon-library.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a href="https://github.com/mayminzz/kwangwoon-clonecoding" target="_blank">Github 보기</a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all uiux">
-                <div class="content_image">
-                  <img src="./img/compose-coffee.png" alt="composeCoffeeImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>컴포즈커피 UXUI 개선</h2>
-                  <a href="https://compose-coffee-d7e8a.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    컴포즈커피 ABOUT US 페이지의 회사 연혁을 무한 스크롤 방식
-                    대신, 각 년도를 클릭하면 해당 년도의 정보를 바로 볼 수
-                    있도록 변경하고 디자인을 바탕으로 html로 구현하였습니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>SCSS</li>
-                    <li>JS</li>
-                    <li>Figma</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>Compose Coffee UXUI 개선</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://compose-coffee-d7e8a.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/COMPOSE-COFFEE"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/nike-shoes.png" alt="shoesImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>신발 쇼핑사이트 제작</h2>
-                  <a href="https://shoes-dd96e.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    카테고리에 따라 상품을 분류하여 사용자에게 보기 쉽게
-                    제공합니다. 카트 버튼을 클릭하면 선택한 상품이 장바구니에
-                    추가되고 상품의 수량에 따라 가격이 동적으로 변화합니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>SCSS</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>신발 쇼핑사이트 제작</h2>
-                    <button class="content_website">
-                      <a href="https://shoes-dd96e.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Nike-Shoes"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/lotto.png" alt="lottoImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>Lotto 번호 추첨기</h2>
-                  <a href="https://lotto-1c57a.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    Math.random()함수를 사용하여 임의의 숫자를 생성하여 로또
-                    번호를 추첨합니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>Lotto 번호 추첨기</h2>
-                    <button class="content_website">
-                      <a href="https://lotto-1c57a.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Lotto"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="example_contents wow">
               <div class="example_content all js">
                 <div class="content_image">
                   <img src="./img/naver.png" alt="naverImg" />
@@ -543,93 +358,67 @@
                     <li>CSS3</li>
                     <li>PC</li>
                   </ul>
-                  <div class="content_overlap">
-                    <h2>NAVER 클론코딩</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://naver-clonecoding.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Naver-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
                 </div>
               </div>
               <div class="example_content all js">
                 <div class="content_image">
-                  <img src="./img/mcdonald.png" alt="mcdonaldImg" />
+                  <img src="./img/abib.png" alt="Abib_img" />
                 </div>
                 <div class="content_desc">
-                  <h2>맥도날드 클론코딩</h2>
-                  <a href="https://mcdonald-s-21c5f.web.app" target="_blank"
+                  <h2>Abib 클론코딩</h2>
+                  <a href="https://abib-clonecoding.web.app" target="_blank"
                     ><i class="fa-solid fa-arrow-up-right-from-square"></i
                   ></a>
                   <p class="content_info">
-                    맥도날드의 Main page + Story page를 마크업한 작업물입니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>맥도날드 클론코딩</h2>
-                    <button class="content_website">
-                      <a href="https://mcdonald-s-21c5f.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/McDonald-s-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/pet.png" alt="petSiteImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>강아지대통령 클론코딩</h2>
-                  <a href="https://pet-clone-7800f.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    강아지 대통령의 메인 페이지를 마크업한 작업물입니다.
+                    아비브 메인 페이지를 클론코딩하였습니다.
                   </p>
                   <ul class="content_skill">
                     <li>HTML5</li>
                     <li>SCSS</li>
                     <li>JS</li>
+                    <li>Figma</li>
                     <li>반응형</li>
                   </ul>
-                  <div class="content_overlap">
-                    <h2>강아지대통령 클론코딩</h2>
-                    <button class="content_website">
-                      <a href="https://pet-clone-7800f.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Pet-Site-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/dnoble.png" alt="dnoble_img" />
+                </div>
+                <div class="content_desc">
+                  <h2>디노블 클론코딩</h2>
+                  <a href="https://dnoble-clonecoding.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    디노블 메인 페이지를 클론코딩하였습니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>SCSS</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js uiux">
+                <div class="content_image">
+                  <img src="./img/compose-coffee.png" alt="composeCoffeeImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>컴포즈커피 UIUX 개선</h2>
+                  <a href="https://compose-coffee-d7e8a.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    컴포즈커피의 BRAND 페이지를 마크업한 작업물입니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>SCSS</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
                 </div>
               </div>
               <div class="example_content all js">
@@ -650,203 +439,6 @@
                     <li>JS</li>
                     <li>Mobile</li>
                   </ul>
-                  <div class="content_overlap">
-                    <h2>에이블리 클론코딩</h2>
-                    <button class="content_website">
-                      <a href="https://ably-b6f85.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Ably-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/D-day.png" alt="D-dayImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>D-day 기념일 계산</h2>
-                  <a href="https://d-day-9a024.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    Date() 내장객체를 사용한 바닐라 자바스크립트로 특정날짜를
-                    기준으로 기념일을 알려주는 예제입니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>Mobile</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>D-day 기념일 계산</h2>
-                    <button class="content_website">
-                      <a href="https://d-day-9a024.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <!-- <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Ably-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button> -->
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/toggle.png" alt="toggleImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>Toggle 예제</h2>
-                  <a href="ttps://library-gnb.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    JavaScript를 사용한 Toggle 예제입니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>Toggle 예제</h2>
-                    <button class="content_website">
-                      <a href="https://library-gnb.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <!-- <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Ably-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button> -->
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/kakaobank.png" alt="kakaoBankImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>KakaoBank 네비게이션 클론코딩</h2>
-                  <a href="https://kakaobank-navigation.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    Navigation을 반응형으로 제작하였습니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>KakaoBank 네비게이션 클론코딩</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://kakaobank-navigation.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Navigation-Example-clone/tree/main/kakaoBank"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/apple.png" alt="appleImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>Apple 네비게이션</h2>
-                  <a href="https://apple-clone-7d8c6.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    Navigation을 반응형으로 제작하였습니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>Apple 네비게이션</h2>
-                    <button class="content_website">
-                      <a
-                        href="https://apple-clone-7d8c6.web.app"
-                        target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Navigation-Example-clone/tree/main/Apple"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/isotope.png" alt="isotopeImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>라이브러리 Isotpoe 예제</h2>
-                  <a href="https://gallery-cc868.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    그리드 레이아웃을 쉽게 구현하도록 도와주는 JavaScript
-                    라이브러리 Isotope를 사용하여 요소들을 동적으로 정렬하고
-                    필터링할 수 있게 하였습니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>라이브러리 Isotpoe 예제</h2>
-                    <button class="content_website">
-                      <a href="https://gallery-cc868.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <!-- <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Pet-Site-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button> -->
-                  </div>
                 </div>
               </div>
               <div class="example_content all js">
@@ -854,7 +446,7 @@
                   <img src="./img/musinsa.png" alt="musinsaLoginImg" />
                 </div>
                 <div class="content_desc">
-                  <h2>MUSINSA 로그인 페이지 클론코딩</h2>
+                  <h2>MUSINSA 로그인</h2>
                   <a href="https://musinsa-login.web.app" target="_blank"
                     ><i class="fa-solid fa-arrow-up-right-from-square"></i
                   ></a>
@@ -867,90 +459,6 @@
                     <li>JS</li>
                     <li>Mobile</li>
                   </ul>
-                  <div class="content_overlap">
-                    <h2>MUSINSA 로그인 페이지 클론코딩</h2>
-                    <button class="content_website">
-                      <a href="https://musinsa-login.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/MUSINSA-Login"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all js">
-                <div class="content_image">
-                  <img src="./img/slide.png" alt="slideImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>슬라이드 예제</h2>
-                  <a href="https://pet-clone-7800f.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    바닐라 자바스크립트 슬라이드 예제입니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JS</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>슬라이드 예제</h2>
-                    <button class="content_website">
-                      <a href="https://pet-clone-7800f.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <!-- <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/Pet-Site-clone-coding"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button> -->
-                  </div>
-                </div>
-              </div>
-              <div class="example_content all react">
-                <div class="content_image">
-                  <img src="./img/mbti-cat.png" alt="mbti-catImg" />
-                </div>
-                <div class="content_desc">
-                  <h2>mbti 고양이</h2>
-                  <a href="https://mbti-cat-db7f3.web.app" target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                  <p class="content_info">
-                    테스트를 통한 성향에 맞는 고양이를 추천해주는 예제입니다.
-                  </p>
-                  <ul class="content_skill">
-                    <li>React</li>
-                    <li>Styled-Component</li>
-                    <li>PC</li>
-                  </ul>
-                  <div class="content_overlap">
-                    <h2>mbti 고양이</h2>
-                    <button class="content_website">
-                      <a href="https://mbti-cat-db7f3.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/CAT-MBTI-Test"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
                 </div>
               </div>
               <div class="example_content all react">
@@ -971,21 +479,128 @@
                     <li>Styled-Component</li>
                     <li>Mobile</li>
                   </ul>
-                  <div class="content_overlap">
-                    <h2>To do list</h2>
-                    <button class="content_website">
-                      <a href="https://todolist-9345c.web.app" target="_blank"
-                        >사이트 보기</a
-                      >
-                    </button>
-                    <button class="content_github">
-                      <a
-                        href="https://github.com/mayminzz/ToDoList-react"
-                        target="_blank"
-                        >Github 보기</a
-                      >
-                    </button>
-                  </div>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/kwangwoon.png" alt="kwangwoon" />
+                </div>
+                <div class="content_desc">
+                  <h2>광운대학교 중앙도서관 클론코딩</h2>
+                  <a href="https://compose-coffee-d7e8a.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    광운대학교 중앙도서관 페이지를 클론코딩하였습니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>SCSS</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/nike-shoes.png" alt="shoesImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>신발 쇼핑사이트 제작</h2>
+                  <a href="https://shoes-dd96e.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    카트 버튼을 클릭하면 선택한 상품이 장바구니에
+                    추가되고 상품의 수량에 따라 가격이 동적으로 변화합니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>SCSS</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/lotto.png" alt="lottoImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>Lotto 번호 추첨기</h2>
+                  <a href="https://lotto-1c57a.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    Math.random()함수를 사용하여 임의의 숫자를 생성하여 로또
+                    번호를 추첨합니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JS</li>
+                    <li>반응형</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/mcdonald.png" alt="mcdonaldImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>맥도날드 클론코딩</h2>
+                  <a href="https://mcdonald-s-21c5f.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    맥도날드의 Main page + Story page를 마크업한 작업물입니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/kakaobank.png" alt="kakaoBankImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>KakaoBank 네비게이션</h2>
+                  <a href="https://kakaobank-navigation.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    Navigation을 반응형으로 제작하였습니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="example_content all js">
+                <div class="content_image">
+                  <img src="./img/apple.png" alt="appleImg" />
+                </div>
+                <div class="content_desc">
+                  <h2>Apple 네비게이션</h2>
+                  <a href="https://apple-clone-7d8c6.web.app" target="_blank"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                  <p class="content_info">
+                    Navigation을 반응형으로 제작하였습니다.
+                  </p>
+                  <ul class="content_skill">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JS</li>
+                    <li>PC</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1015,17 +630,41 @@
             </ul>
           </div>
         </section>
+        <div id="go_to_top">
+          <button>
+            <a href="#home">
+              <i class="fas fa-angle-up"></i>
+            </a>
+          </button>
+        </div>
       </main>
       <footer>
         <span class="copyright">©2024 KWON MIN-JOO All Rights Reserved</span>
       </footer>
-      <div id="go_to_top">
-        <button>
-          <a href="#home">
-            <i class="fas fa-angle-up"></i>
-          </a>
-        </button>
-      </div>
     </div>
+    <!-- custom js -->
+    <script defer src="./script.js"></script>
+    <!-- featherlight -->
+    <script defer src="//code.jquery.com/jquery-latest.js"></script>
+    <script
+      defer
+      src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <!-- wow.js -->
+    <script src="./source/wow.js"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/bd0a8925a1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
